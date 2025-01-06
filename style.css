@@ -255,3 +255,9 @@ nav a:hover {
 #close-form:hover {
     background-color: #c9302c;
 }
+
+/* Styla placeholdertexten */
+input::placeholder,
+textarea::placeholder {
+    color: black;  /* Ändra till svart */
+}
