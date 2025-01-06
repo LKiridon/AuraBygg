@@ -29,9 +29,10 @@ body, html {
 .logo {
     max-width: 100%;
     height: auto;
-    width: 600px; /* Gör logotypen mycket större */
+    width: 880px; /* Gör logotypen ännu större */
     filter: brightness(0.3) sepia(1); /* Mörkar och lägger en brun ton */
-    opacity: 0.8; /* Gör logotypen något genomskinlig */
+    opacity: 0.85; /* Gör logotypen något genomskinlig */
     mix-blend-mode: multiply; /* Blandar loggan med bakgrunden */
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6); /* Simulerar brännmärkets djup */
+    box-shadow: none; /* Tar bort fyrkantiga skuggor */
+    background-color: transparent; /* Försäkrar att ingen bakgrund visas */
 }
