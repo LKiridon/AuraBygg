@@ -256,8 +256,14 @@ nav a:hover {
     background-color: #c9302c;
 }
 
-/* Styla placeholdertexten */
+/* Styla texten i input och textarea till svart */
+input,
+textarea {
+    color: black; /* Gör all text svart */
+}
+
+/* Styla placeholdertexten till svart också */
 input::placeholder,
 textarea::placeholder {
-    color: black;  /* Ändra till svart */
+    color: black;  /* Svart placeholdertext */
 }
