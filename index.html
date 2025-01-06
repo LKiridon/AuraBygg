@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsiv Hemsida</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Byggfirma</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
 </head>
 <body>
     <div class="container">
         <div class="logo-container">
-            <img src="AuraByggBanner.png" alt="Logotyp" class="logo">
+            <img class="logo" src="AuraByggBanner.png" alt="Företagets logotyp">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#tjanster">TJÄNSTER</a></li>
+                <li><a href="#kontakt">KONTAKT</a></li>
+                <li><a href="#referenser">REFERENSER</a></li>
+            </ul>
+        </nav>
+
+        <div id="tjanster" class="content-section">
+            <h2>TJÄNSTER</h2>
+            <p>Vi erbjuder ett brett utbud av byggtjänster för både små och stora projekt.</p>
+        </div>
+
+        <div id="kontakt" class="content-section">
+            <h2>KONTAKT</h2>
+            <p>Kontakta oss för att diskutera ditt projekt och få en kostnadsfri offert.</p>
+        </div>
+
+        <div id="referenser" class="content-section">
+            <h2>REFERENSER</h2>
+            <p>Här kan du läsa om tidigare projekt vi har genomfört och vad våra kunder tycker om vårt arbete.</p>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

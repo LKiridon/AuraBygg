@@ -1,0 +1,162 @@
+/* Reset-stilar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Grundlayout */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'PlastikFilm', sans-serif; /* Typsnitt för hela sidan */
+    height: 100%;
+}
+
+/* Bakgrundsbild */
+.container {
+    background: url('bgra.jpg') no-repeat center center/cover;
+    position: relative;
+    min-height: 100vh;
+    color: white;
+}
+
+/* Stil för logotypen som brännmärke */
+.logo {
+    max-width: 100%;
+    height: auto;
+    width: 75%; /* Logotypens bredd i procent */
+    filter: brightness(0.3) sepia(1); /* Mörkar och lägger en brun ton */
+    opacity: 0.85; /* Gör logotypen något genomskinlig */
+    mix-blend-mode: multiply; /* Blandar loggan med bakgrunden */
+    box-shadow: none; /* Tar bort fyrkantiga skuggor */
+    background-color: transparent; /* Försäkrar att ingen bakgrund visas */
+}
+
+nav a {
+    color: #3e3e3e; /* Färg på menyn */
+    text-decoration: none;
+    font-size: 22px; /* Ny fontstorlek, större */
+    padding: 10px;
+    text-transform: uppercase; /* Gör texten i menyn till stora bokstäver */
+    font-weight: bold; /* Gör texten fetare */
+    transition: all 0.3s ease-in-out; /* För animationseffekt */
+    filter: brightness(0.3) sepia(1); /* Lägger på samma mörka, bruna effekt */
+    opacity: 0.85;
+    mix-blend-mode: multiply; /* Blandar länken med bakgrunden */
+}
+nav a:hover {
+    color: #fff; /* Gör texten vit vid hover för att öka kontrasten */
+    text-shadow: 0 0 5px rgba(255, 165, 0, 0.7), 0 0 10px rgba(255, 165, 0, 0.5), 0 0 15px rgba(255, 165, 0, 0.3); /* Orangelysande glöd */
+    transition: all 0.3s ease-in-out; /* För att göra effekten mjuk */
+    filter: none; /* Lägger på samma mörka, bruna effekt */
+}
+
+
+
+
+
+/* Sektionerna döljs initialt för desktop */
+.content-section {
+    display: none; /* Döljer alla sektioner initialt */
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    border-radius: 8px;
+}
+
+/* Mobilversion (små skärmar) */
+@media (max-width: 768px) {
+    .container {
+        position: relative;
+        background-attachment: fixed;
+    }
+
+    /* Menyikon för mobil */
+    .menu-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* Dölj navigationsmenyn tills menyikonen klickas */
+    .mobile-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .mobile-nav li {
+        margin: 10px 0;
+    }
+
+    /* Sektionerna visas i ett scrollvänligt flöde */
+    .content-section {
+        display: block; /* Visar alla sektioner på mobilen */
+        padding: 50px 20px;
+        background: rgba(0, 0, 0, 0.5);
+        margin: 20px 0;
+        border-radius: 8px;
+    }
+
+    /* Fixar bakgrund som en fast bild under innehållet */
+    .container {
+        background-attachment: fixed;
+    }
+}
+
+/* Desktopversion (stora skärmar) */
+@media (min-width: 769px) {
+    /* Logotyp och sektioner */
+    .logo-container {
+        text-align: center;
+        padding: 40px;
+    }
+
+    /* Meny för desktop */
+    nav {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 0 15px;
+    }
+
+    /* Sektioner som kan visas och döljas för desktop */
+    .content-section {
+        display: none;
+        padding: 50px;
+        background: rgba(0, 0, 0, 0.5);
+        margin: 20px;
+        border-radius: 8px;
+    }
+
+    /* Visa vald sektion */
+    .show {
+        display: block;
+    }
+}
