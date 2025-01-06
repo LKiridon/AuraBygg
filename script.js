@@ -6,10 +6,9 @@ console.log("GSAP version:", gsap.version);
 document.addEventListener("DOMContentLoaded", () => {
     const logo = document.querySelector(".logo");
     
-    // Testa enkel animation
-    gsap.fromTo(
-        logo,
-        { opacity: 0, scale: 0.5 },
-        { opacity: 1, scale: 1, duration: 1, ease: "power2.out" }
-    );
+  gsap.fromTo(
+    ".logo",
+    { opacity: 0, scale: 1.2, filter: "brightness(1)" },
+    { opacity: 0.8, scale: 1, filter: "brightness(0.3) sepia(1)", duration: 2, ease: "power2.inOut" }
+);;
 });
