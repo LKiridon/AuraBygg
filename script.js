@@ -35,3 +35,40 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// Hämta knappar och formulär
+const contactBtn = document.getElementById('contact-btn');
+const contactFormContainer = document.getElementById('contact-form-container');
+const closeFormBtn = document.getElementById('close-form');
+
+// Visa kontaktformuläret när knappen klickas
+contactBtn.addEventListener('click', () => {
+    contactFormContainer.style.display = 'flex';
+});
+
+// (Valfritt) Stäng kontaktformuläret om användaren klickar utanför
+window.addEventListener('click', (event) => {
+    if (event.target === contactFormContainer) {
+        contactFormContainer.style.display = 'none';
+    }
+});
+
+// När sidan är laddad
+window.onload = function() {
+    emailjs.init('Aqf-wFwkeqgSJH8PF'); // Ersätt 'YOUR_USER_ID' med ditt EmailJS användar-ID
+};
+
+// Formulärhantering
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Förhindrar standardformulärsändning
+    
+    // Skickar formuläret via EmailJS
+    emailjs.sendForm('service_79qsun9', 'template_c5ni5uq', this)
+        .then(function(response) {
+            console.log('Success:', response);
+            alert('Meddelandet skickades framgångsrikt!');
+        }, function(error) {
+            console.log('Error:', error);
+            alert('Det gick inte att skicka meddelandet. Försök igen senare.');
+        });
+});

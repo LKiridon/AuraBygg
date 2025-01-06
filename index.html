@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Byggfirma</title>
+    <title>Aura Bygg & Trädgård</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -25,17 +26,37 @@
 
         <div id="tjanster" class="content-section">
             <h2>TJÄNSTER</h2>
-            <p>Vi erbjuder ett brett utbud av byggtjänster för både små och stora projekt.</p>
+            <p>Jag hjälper dig med både nyproduktion och renovering och tar mig an de flesta mindre och mellanstora projekt. Oavsett om du bygger nytt eller vill renovera, ser jag till att det blir gjort rätt och hållbart, alltid med ett tydligt miljöfokus. Jag arbetar tillsammans med dig i både planering och genomförande för att hitta de bästa lösningarna och säkerställa att ditt projekt blir precis som du tänkt dig. Jag hjälper även till med trädgårdsarbete för att skapa funktionella och hållbara utemiljöer.</p>
         </div>
 
         <div id="kontakt" class="content-section">
-            <h2>KONTAKT</h2>
-            <p>Kontakta oss för att diskutera ditt projekt och få en kostnadsfri offert.</p>
+            <section id="kontakt">
+                <h2>Kontakta mig</h2>
+                <p>Kontakta mig för att diskutera ditt projekt och få en kostnadsfri offert.</p>
+                <button id="contact-btn" class="contact-btn">Skicka Förfrågan</button>
+            </section>
+            
+            <!-- Kontaktformulär som kan visas vid knapptryckning -->
+            <div id="contact-form-container" class="contact-form-container">
+                <form id="contact-form">
+                    <label for="name">Ditt namn:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Din e-post:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Meddelande:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Skicka</button>
+                </form>
+            </div>
+            
         </div>
 
         <div id="referenser" class="content-section">
             <h2>REFERENSER</h2>
-            <p>Här kan du läsa om tidigare projekt vi har genomfört och vad våra kunder tycker om vårt arbete.</p>
+            <p>Maila mig för referenser.</p>
         </div>
     </div>
 </body>

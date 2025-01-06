@@ -160,3 +160,98 @@ nav a:hover {
         display: block;
     }
 }
+
+/* Grundstil för kontaktsektionen */
+#kontakt {
+    text-align: center;
+    margin: 50px 0;
+}
+
+#kontakt h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#kontakt p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Stil för kontaktknappen */
+.contact-btn {
+    background-color: #ff8c00; /* Orange färg för knappen */
+    color: white;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #e67e00; /* Mörkare orange vid hover */
+}
+
+/* Kontaktformulär, initialt dolt */
+.contact-form-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#contact-form h3 {
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    display: block;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #e67e00;
+}
+
+#close-form {
+    background-color: #d9534f;
+    margin-top: 10px;
+}
+
+#close-form:hover {
+    background-color: #c9302c;
+}
